@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Arena</title>
+    <link rel="stylesheet" href="arena.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".middle_container2").hide()
+        $(".player1").hide()
+        $(".player2").hide()
+        $("#beach").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/beach.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#planet").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/earth.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#dojo").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/dojo.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#forest").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/forest.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#matrix").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/matrix.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#snow").hover(
+          function(){
+          $(".container").css({"background-image": "url(photos/snow.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        },
+          function(){
+            $(".container").css("background", "black")
+          }
+        )
+        $("#beach").click(function(){
+          $("#beach").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/beach.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#planet").click(function(){
+          $("#planet").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/earth.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#dojo").click(function(){
+          $("#dojo").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/dojo.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#forest").click(function(){
+          $("#forest").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/forest.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#matrix").click(function(){
+          $("#matrix").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/matrix.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#snow").click(function(){
+          $("#snow").off("mouseleave")
+          $(".middle_container").hide()
+          $(".middle_container2").show()
+          $(".container").css({"background-image": "url(photos/snow.jpg)", "background-size": "100%", "background-repeat":"no-repeat"})
+        })
+        $("#player1").change(function(){
+          $(".player1").show()
+          $(".player1").css({"background-image": $("#player1").val(), "background-size":"contain", "background-repeat":"no-repeat"})
+        })
+        $("#player2").change(function(){
+          $(".player2").show()
+          $(".player2").css({"background-image": $("#player2").val(), "background-size":"contain", "background-repeat":"no-repeat"})
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="middle_container">
+        <h1>Select Arena</h1>
+        <div class="menu">
+          <button type="button" id="beach">Beach</button>
+          <button type="button" id="planet">Planet</button>
+          <button type="button" id="dojo">Dojo</button>
+          <button type="button" id="forest">Forest</button>
+          <button type="button" id="matrix">Matrix</button>
+          <button type="button" id="snow">Snow</button>
+        </div>
+      </div>
+      <div class="middle_container2">
+        <h1>Select Players</h1>
+        <select class="select_ninja" id="player1">
+          <option>Select Ninja</option>
+          <option value="url(photos/donny.png)">Donny</option>
+          <option value="url(photos/leo.png)">Leo</option>
+          <option value="url(photos/mikey.png)">Mikey</option>
+          <option value="url(photos/raphael.png)">Raphael</option>
+        </select>
+        <select id="player2">
+          <option>Select Ninja</option>
+          <option value="url(photos/donny.png)">Donny</option>
+          <option value="url(photos/leo.png)">Leo</option>
+          <option value="url(photos/mikey.png)">Mikey</option>
+          <option value="url(photos/raphael.png)">Raphael</option>
+        </select>
+      </div>
+      <div class="player1"></div>
+      <div class="player2"></div>
+    </div>
+  </body>
+</html>
